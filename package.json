@@ -1,0 +1,31 @@
+{
+  "name": "sequelize-minds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NigelEarle/Sequelize-Minds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NigelEarle/Sequelize-Minds/issues"
+  },
+  "homepage": "https://github.com/NigelEarle/Sequelize-Minds#readme",
+  "dependencies": {
+    "babel-eslint": "^7.1.1",
+    "compression": "^1.6.2",
+    "express": "^4.14.1",
+    "hbs": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.15.0"
+  }
+}
