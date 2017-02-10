@@ -5,4 +5,4 @@ route.get('/', (req, res) => {
   res.send('go pats!');
 })
 
-module.exports = router;
+module.exports = route;

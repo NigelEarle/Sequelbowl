@@ -3,6 +3,7 @@ const path = require('path');
 const compression = require('compression');
 const patriots = require('./routes/patriots');
 const falcons = require('./routes/falcons');
+const db = require('./models');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -23,4 +24,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-app.listen(PORT, (req, res) => console.log(`Server running at port: ${PORT}`))
+app.listen(PORT, (req, res) => {
+  db.sequelize.sync();
+  console.log(`Server running at port: ${PORT}`)
+})
