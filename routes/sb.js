@@ -5,6 +5,8 @@ const db = require('../models');
 const {
   Superbowl,
   Team,
+  Player,
+  Coach,
 } = db;
 
 route.get('/:number', (req, res) => {
@@ -21,11 +23,41 @@ route.get('/:number', (req, res) => {
     }]
   })
   .then(result => {
-    res.send(result.dataValues)
+    const {dataValues} = result;
+    res.render('sb', {
+      data: dataValues,
+    })
   })
   .catch(err => {
     res.send(err)
   });
+});
+
+route.get('/:superbowl_id/:team_id', (req, res) => {
+  const {
+    superbowl_id,
+    team_id,
+  } = req.params;
+
+  const query = {
+    team_id,
+    superbowl_id,
+  }
+
+  Player.findAll({
+    where: query
+  })
+  .then(players => {
+    Coach.findAll({
+      where: query
+    })
+    .then(coaches => {
+      res.render('team', {
+        players,
+        coaches
+      })
+    })
+  })
 });
 
 module.exports = route;

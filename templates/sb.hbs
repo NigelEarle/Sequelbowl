@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Super Bowl {{data.number}}</h1>
+  <h4>{{data.location}}</h4>
+  <div>
+  {{#each data.Teams}}
+    <div class="superBowl">
+      <a href="/sb/{{../data.id}}/{{this.id}}"><h1>{{this.name}}</h1></a>
+      <h2>{{this.conference}}</h2>
+      <h3>{{this.TeamsSuperbowl.score}}</h3>
+    </div>
+  {{/each}}
+  </div>
+</div>

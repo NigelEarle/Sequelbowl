@@ -9,6 +9,12 @@ module.exports = function(sequelize, DataTypes) {
           through: 'TeamsSuperbowl',
           foreignKey: 'superbowl_id',
         })
+        Superbowl.hasMany(models.Player, {
+          foreignKey: 'superbowl_id',
+        })
+        Superbowl.hasMany(models.Coach, {
+          foreignKey: 'superbowl_id',
+        })
       }
     }
   });
