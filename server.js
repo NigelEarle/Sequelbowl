@@ -1,8 +1,7 @@
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
-const patriots = require('./routes/patriots');
-const falcons = require('./routes/falcons');
+const sb = require('./routes/sb');
 const db = require('./models');
 const PORT = process.env.PORT || 3000;
 
@@ -11,8 +10,7 @@ const app = express();
 app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use('/patriots', patriots);
-app.use('/falcons', falcons);
+app.use('/sb', sb);
 
 app.set('views', path.join(__dirname, 'templates'));
 app.set('view engine', 'hbs');

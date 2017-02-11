@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   const Stat = sequelize.define('Stat', {
-    name: DataTypes.STRING,
     catches: DataTypes.INTEGER,
     yards: DataTypes.INTEGER,
     td: DataTypes.INTEGER,
