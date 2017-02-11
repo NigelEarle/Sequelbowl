@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
           foreignKey: 'team_id',
         });
         Team.hasMany(models.Coach, {
-          as: 'team_id'
+          foreignKey: 'team_id'
         })
       }
     }
