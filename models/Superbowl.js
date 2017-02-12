@@ -2,6 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   const Superbowl = sequelize.define('Superbowl', {
     number: DataTypes.STRING,
     location: DataTypes.STRING,
+    date: DataTypes.STRING, 
   }, {
     classMethods: {
       associate: function(models) {
