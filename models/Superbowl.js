@@ -5,14 +5,16 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        Superbowl.belongsToMany(models.Player, {
+          through: 'PlayersSuperbowl',
+          foreignKey: 'superbowl_id',
+        })
         Superbowl.belongsToMany(models.Team, {
           through: 'TeamsSuperbowl',
           foreignKey: 'superbowl_id',
         })
-        Superbowl.hasMany(models.Player, {
-          foreignKey: 'superbowl_id',
-        })
-        Superbowl.hasMany(models.Coach, {
+        Superbowl.belongsToMany(models.Coach, {
+          through: 'CoachesSuperbowl',
           foreignKey: 'superbowl_id',
         })
       }

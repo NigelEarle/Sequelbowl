@@ -34,6 +34,7 @@ route.get('/:number', (req, res) => {
 });
 
 route.get('/:superbowl_id/:team_id', (req, res) => {
+  // get all show OF and DF player and coaches of a team 
   const {
     superbowl_id,
     team_id,
@@ -44,20 +45,7 @@ route.get('/:superbowl_id/:team_id', (req, res) => {
     superbowl_id,
   }
 
-  Player.findAll({
-    where: query
-  })
-  .then(players => {
-    Coach.findAll({
-      where: query
-    })
-    .then(coaches => {
-      res.render('team', {
-        players,
-        coaches
-      })
-    })
-  })
+  res.send('hello')
 });
 
 module.exports = route;

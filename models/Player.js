@@ -7,6 +7,10 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        Player.belongsToMany(models.Superbowl, {
+          through: 'PlayersSuperbowl',
+          foreignKey: 'player_id',
+        })
         Player.belongsTo(models.Team, {
           foreignKey: 'team_id',
         })

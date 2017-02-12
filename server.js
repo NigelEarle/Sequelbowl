@@ -19,13 +19,6 @@ app.get('/', (req, res) => {
 app.set('views', path.join(__dirname, 'templates'));
 app.set('view engine', 'hbs');
 
-// catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   var err = new Error('Not Found');
-//   err.status = 404;
-//   next(err);
-// });
-
 app.listen(PORT, (req, res) => {
   db.sequelize.sync();
   console.log(`Server running at port: ${PORT}`)
