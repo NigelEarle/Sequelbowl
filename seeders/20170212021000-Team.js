@@ -31,7 +31,7 @@ module.exports = {
         name: 'Seattle Seahawks',
         conference: 'NFC',
         createdAt: new Date,
-        upatedAt: new Date,
+        updatedAt: new Date,
       }
     ], {});
   },
