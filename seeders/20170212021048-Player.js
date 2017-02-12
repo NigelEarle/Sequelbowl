@@ -97,7 +97,7 @@ module.exports = {
         name: 'Emmanuel Sanders',
         player_title: 'Wide Reciever',
         description: 'Game sealing pick on Seahawks',
-        position_title: 'defense',
+        position_title: 'offense',
         createdAt: new Date,
         updatedAt: new Date,
         team_id: 3,
