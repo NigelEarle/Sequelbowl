@@ -54,6 +54,24 @@ module.exports = {
           createdAt: new Date,
           updatedAt: new Date,
           team_id: 1,
+        },
+        {
+          name: 'Pete Carroll',
+          coaching_title: 'Head Coach',
+          description: 'Previous Spartans head coach',
+          position_title: 'head coach',
+          createdAt: new Date,
+          updatedAt: new Date,
+          team_id: 1,
+        },
+        {
+          name: 'Jon Fox',
+          coaching_title: 'Head Coach',
+          description: 'Now Bears head coach',
+          position_title: 'head coach',
+          createdAt: new Date,
+          updatedAt: new Date,
+          team_id: 1,
         }
     ], {});
   },

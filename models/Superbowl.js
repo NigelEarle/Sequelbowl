@@ -8,15 +8,17 @@ module.exports = function(sequelize, DataTypes) {
         Superbowl.belongsToMany(models.Player, {
           through: 'PlayersSuperbowl',
           foreignKey: 'superbowl_id',
-        })
+        });
+
         Superbowl.belongsToMany(models.Team, {
           through: 'TeamsSuperbowl',
           foreignKey: 'superbowl_id',
-        })
+        });
+        
         Superbowl.belongsToMany(models.Coach, {
           through: 'CoachesSuperbowl',
           foreignKey: 'superbowl_id',
-        })
+        });
       }
     }
   });

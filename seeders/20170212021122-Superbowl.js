@@ -11,6 +11,12 @@ module.exports = {
         updatedAt: new Date,
       },
       {
+        number: 49,
+        location: 'Glendale, AZ',
+        createdAt: new Date,
+        updatedAt: new Date,
+      },
+      {
         number: 50,
         location: 'Santa Clara,CA',
         createdAt: new Date,
