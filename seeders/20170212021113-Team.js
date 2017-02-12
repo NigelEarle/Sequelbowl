@@ -27,6 +27,12 @@ module.exports = {
         createdAt: new Date,
         updatedAt: new Date
       },
+      {
+        name: 'Seattle Seahawks',
+        conference: 'NFC',
+        createdAt: new Date,
+        upatedAt: new Date,
+      }
     ], {});
   },
 
