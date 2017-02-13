@@ -8,7 +8,8 @@ __Data model of table relations__
 
 # Setup
 
-1. Make config folder and config/config.json in root of project.
+1. Make config folder for DB connection
+
 `mkdir config && touch config/config.json`
 2. Create DB config in `./config/config.json`
 
