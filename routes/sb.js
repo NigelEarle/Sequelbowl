@@ -17,12 +17,14 @@ route.get('/:number', (req, res) => {
     where : {
       number: number
     },
-    include: [{
-      model: Team,
-      through: {
-        attributes: ['score']
+    include: [
+      {
+        model: Team,
+        through: {
+          attributes: ['score']
+        }
       }
-    }]
+    ]
   })
   .then(result => {
     const {dataValues} = result;
@@ -36,18 +38,54 @@ route.get('/:number', (req, res) => {
 });
 
 route.get('/:superbowl_id/:team_id', (req, res) => {
-  // get all show OF and DF player and coaches of a team 
   const {
     superbowl_id,
     team_id,
   } = req.params;
 
-  const query = {
-    team_id,
-    superbowl_id,
-  }
-
-  res.send('hello')
+  Superbowl.findAll({
+    where: {
+      id: superbowl_id,
+    },
+    include: [
+      {
+        model: Team,
+        through: {
+          attributes: ['score']
+        },
+        where: {
+          id: team_id,
+        },
+      },
+      {
+        model: Player,
+        through: {
+          attributes: []
+        },
+        where: {
+          team_id: team_id,
+        }
+      },
+      {
+        model: Coach,
+        through: {
+          attributes: []
+        },
+        where: {
+          team_id: team_id
+        }
+      },
+    ],
+  })
+  .then(data => {
+    const result = JSON.parse(JSON.stringify(data))[0]
+    res.render('team', {
+      game: result,
+      team: result.Teams[0],
+      players: result.Players,
+      coaches: result.Coaches,
+    })
+  })
 });
 
 module.exports = route;

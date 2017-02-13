@@ -1,3 +1,20 @@
-<div>
-  {{!-- Show offense and defense list --}}
+<div class="container">
+  <h1>{{team.name}}</h1>
+  <h4><b>{{team.conference}}</b></h4>
+  <h1>{{team.TeamsSuperbowl.score}}</h1>
+  <br>
+  <hr>
+  <div>
+    <h2>Players</h2>
+    {{#each players}}
+      <div><h3>{{this.name}}</h3></div>
+    {{/each}}
+  </div>
+  <hr>
+  <div>
+    <h2>Coaches</h2>
+    {{#each coaches}}
+      <div><h3>{{this.name}}</h3></div>
+    {{/each}}
+  </div>
 </div>

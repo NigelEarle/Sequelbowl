@@ -62,7 +62,7 @@ module.exports = {
           position_title: 'head coach',
           createdAt: new Date,
           updatedAt: new Date,
-          team_id: 1,
+          team_id: 5,
         },
         {
           name: 'Jon Fox',
@@ -71,7 +71,7 @@ module.exports = {
           position_title: 'head coach',
           createdAt: new Date,
           updatedAt: new Date,
-          team_id: 1,
+          team_id: 3,
         }
     ], {});
   },

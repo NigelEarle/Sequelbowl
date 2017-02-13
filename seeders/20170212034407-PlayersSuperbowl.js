@@ -24,12 +24,6 @@ module.exports = {
       },
       {
         superbowl_id: 1,
-        player_id: 12,
-        createdAt: new Date,
-        updatedAt: new Date,
-      },
-      {
-        superbowl_id: 1,
         player_id: 17,
         createdAt: new Date,
         updatedAt: new Date,

@@ -10,10 +10,8 @@ module.exports = function(sequelize, DataTypes) {
         Player.belongsToMany(models.Superbowl, {
           through: 'PlayersSuperbowl',
           foreignKey: 'player_id',
-        })
-        Player.belongsTo(models.Team, {
-          foreignKey: 'team_id',
-        })
+          otherKey: 'superbowl_id'
+        });
         Player.belongsTo(models.Stat, {
           foreignKey: 'stat_id',
         })
