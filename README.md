@@ -48,6 +48,6 @@ __Data model of table relations__
 8. Navigate to `http://127.0.0.1:3000`
 
 ----
-**This project is currently still being worked on**
+**This project is currently being worked on**
 
 
