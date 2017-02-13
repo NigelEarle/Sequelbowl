@@ -9,11 +9,6 @@ __Data model of table relations__
 
 # Setup
 
-1. Make config folder for DB connection.
-
-   `mkdir config && touch config/config.json`
-2. Create DB config in `./config/config.json`
-
 ```
 // Example config
 {
@@ -40,12 +35,17 @@ __Data model of table relations__
   }
 }
 ```
+1. Make config folder for DB connection.
+
+   `mkdir config && touch config/config.json`
+2. Create DB config in `./config/config.json`
+
 3. Create DB locally to connect to.
-2. Run `npm install -g sequelize-cli` if you dont already have it installed
-3. Run `npm install`
-4. Run `npm start`
-5. Run `sequelize db:seed:all` to seed local DB.
-6. Navigate to `http://127.0.0.1:3000`
+4. Run `npm install -g sequelize-cli` if you dont already have it installed
+5. Run `npm install`
+6. Run `npm start`
+7. Run `sequelize db:seed:all` to seed local DB.
+8. Navigate to `http://127.0.0.1:3000`
 
 ----
 **This project is currently still being worked on**
