@@ -2,15 +2,16 @@
 
 SQL relation exercise using `Sequelize` and `Express.js`.  **Sequelbowl** uses a small dataset of Superbowl teams, coaches, players and player statistics over the last four years.
 
----
+
 __Data model of table relations__
+---
 ![data-model](https://s3-us-west-2.amazonaws.com/rndm-img/sequelbowl_data_model.png)
 
 # Setup
 
-1. Make config folder for DB connection
+1. Make config folder for DB connection.
 
-`mkdir config && touch config/config.json`
+   `mkdir config && touch config/config.json`
 2. Create DB config in `./config/config.json`
 
 ```
