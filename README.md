@@ -35,11 +35,8 @@ __Data model of table relations__
   }
 }
 ```
-1. Make config folder for DB connection.
-
-   `mkdir config && touch config/config.json`
+1. Create `config/config.json` file for DB connection.
 2. Create DB config in `./config/config.json`
-
 3. Create DB locally to connect to.
 4. Run `npm install -g sequelize-cli` if you dont already have it installed
 5. Run `npm install`
