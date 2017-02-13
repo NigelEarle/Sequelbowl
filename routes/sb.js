@@ -9,6 +9,8 @@ const {
   Coach,
 } = db;
 
+route.get('/', (req, res) => res.render('index'))
+
 route.get('/:number', (req, res) => {
   const {number} = req.params;
   Superbowl.find({

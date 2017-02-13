@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/sb', sb);
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.redirect('/sb/')
 })
 
 app.set('views', path.join(__dirname, 'templates'));

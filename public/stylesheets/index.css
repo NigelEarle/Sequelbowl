@@ -1,8 +1,14 @@
 .container {
   text-align: center;
 }
+
+
 .superBowl {
   display: inline-block;
   margin-right: 50px;
   text-align: center;
+}
+
+.score {
+  font-size: 55px;
 }
